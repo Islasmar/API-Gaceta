@@ -1,0 +1,52 @@
+extends ../layout/index
+
+block content 
+    div.py-10 
+    h1.text-center.text-4xl.font-extrabold.my-10.text-moonstone Real 
+        span.font-normal.text-rosa State
+    h2.text-center.text-3xl.font-extrabold.text-orangeColor= page
+
+    if errors
+        div(class="max-w-md mx-auto my-10")
+            each error in errors 
+             div(class="bg-white-900 text-center py-4 lg:px-4")
+                div(class="p-2 bg-red-500 items-center text-white leading-none lg:rounded-md flex lg:inline-flex" role="alert")
+                    span(class="flex rounded-full bg-rosa uppercase px-2 py-1 text-xs font-bold mr-3") Alert
+                    span(class="font-semibold mr-2 text-left flex-auto")= error.msg
+                    svg(class="fill-current opacity-75 h-4 w-4", xmlns="http://www.w3.org/2000/svg", viewBox="0 0 20 20")
+                    path(d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z")
+
+        script.
+            document.addEventListener("DOMContentLoaded", function() {
+                const alerts = document.querySelectorAll('.bg-white-900');
+
+                alerts.forEach(function(alert, index) {
+                    setTimeout(function() {
+                     alert.style.display = 'none';
+                    }, (index + 1) * 4000); 
+                });
+             });
+    .mt-8.mx-auto.max-w-md 
+        .bg-cream.py-8.px-4.shadow.rounded-md
+            form.space-5(action="/login/register" method="POST" novalidate)
+                input(type="hidden" name="_crsf" value= csrfToken)
+                div
+                    label.block.text-sm.text-taupeColor.uppercase.mb-2.font-bold(for="name") Your name 
+                    input#name.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-orangeColor.mb-2(placeholder="Full name" type="text" name="name" value= user ? user.name : '')
+                div 
+                    label.block.text-sm.text-taupeColor.uppercase.mb-2.font-bold(for="email") Email Register
+                    input#email.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-orangeColor.mb-2(placeholder="user@marislas.com" type="email" name="email" value= user ? user.email : '' )
+                div 
+                    label.block.text-sm.text-taupeColor.uppercase.mb-2.font-bold(for="password") Password 
+                    input#name.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-orangeColor.mb-2(placeholder="Tu password" type="password" name="password")
+                div 
+                    label.block.text-sm.text-taupeColor.uppercase.mb-2.font-bold(for="repeatpassword") Repeat Password 
+                    input#name.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-orangeColor.mb-2(placeholder="Repeat your password" type="password" name="repeatpassword")
+                
+                
+
+                div.flex.items-center.justify-between 
+                    a.text-xs.text-gray-500(href="/login" class="hover:underline decoration-4 decoration-rosa mt-2") If you have account,please Login 
+                    a.text-xs.text-gray-500(href="/login/recovery" class="hover:underline decoration-4 decoration-rosa mt-2") Forgot your password? Recover it 
+
+                input(class="w-full  bg-teal hover:bg-rosa text-black  hover:text-teal font-bold py-3 cursor-pointer rounded-xl mt-4" type="submit" value="Create account")    

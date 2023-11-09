@@ -1,14 +1,24 @@
 {
-  "name": "api-gaceta",
+  "name": "mx.edu.utxj.ti.dsm.awos.api-gaceta-utxj",
   "version": "1.0.0",
-  "description": "",
+  "description": "Este proyecto será desarrollado con Node, Express, Sequelize, PUG, Tailwind, Leaflet, consistirá en realizar un sistema web que subir contenido relevante de la UTXJ",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon src/server.js",
+    "start": "node src/index.js",
+    "start-permanente": "nodemon src/index.js",
+    "css": "postcss src/public/css/tailwind.css -o src/public/css/app.css --watch"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "MVC",
+    "Pug",
+    "Tailwind",
+    "MySQL",
+    "Sequelize"
+  ],
+  "author": "Mariano Fajardo Islas, Griselda, Carlo Armando, Uriel",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "css": "^3.0.0",
