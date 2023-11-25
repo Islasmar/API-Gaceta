@@ -24,8 +24,8 @@ La Gaceta Universitaria tiene como objetivo principal ser un enfoque de conocimi
 La creación y desarrollo de la Gaceta Universitaria de la carrera de Desarrollo de Software y Entornos Virtuales y Negocios Digitales en la Universidad Tecnológica de Xicotepec de Juárez se lleva a cabo con el propósito fundamental de enriquecer la experiencia académica y profesional de nuestros estudiantes, así como contribuir al avance y difusión del conocimiento en el campo de la tecnología y los negocios digitales.
 
 ## :white_check_mark:Tecnologías Utilizadas
-  **MVC
-  **Pug
-  **Tailwind
-  **MySQL
-  **Sequelize
+  --MVC
+  --Pug
+  --Tailwind
+  --MySQL
+  --Sequelize
