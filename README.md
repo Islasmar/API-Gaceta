@@ -11,7 +11,7 @@
 - [Alcance del Producto / Software](#Alcance)
 - [Funcionalidades del Producto](#Funcionalidades)
 
-## Introdunción
+## Introducción
 Binevenidos a la aplicación web de la ***GACETA DE LA UTXJ(DSM,EVN)*** esta aplicación esta tanto como para los alumnos de la universidad así como tambien para los docentes, esto con el proposito de tener a la comunidad estudiantil informados en varios aspecto tanto como pueden ser: eventos, conferencias, casos de éxito entre otros. La palicación servirá cómo un periódico en línea para que los docentes y alumnos comparatan noticias relevantes y opiniones.
 
 ## Objetivo
