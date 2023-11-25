@@ -25,9 +25,9 @@ La creación y desarrollo de la Gaceta Universitaria de la carrera de Desarrollo
 
 ## :white_check_mark:Tecnologías Utilizadas
 
-  - MVC
-  - Pug
-  - Tailwind
-  - MySQL
-  - Sequelize
-  - - -
+- MVC
+- Pug
+- Tailwind
+- MySQL
+- Sequelize
+- - -
