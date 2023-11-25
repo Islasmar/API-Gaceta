@@ -7,7 +7,7 @@
 - [Introducción](#Introducción)
 - [Objetivo del Proyecto](#Objetivo)
 - [Propósito](#Propósito)
-- [Tecnologías Utilizadas](#Tecnologías)
+- [Tecnologías Utilizadas](#Tecnologías_Utilizadas)
 - [Alcance del Producto / Software](#Alcance)
 - [Funcionalidades del Producto](#Funcionalidades)
 
