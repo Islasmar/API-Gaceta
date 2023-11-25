@@ -9,6 +9,8 @@
    import Seller from './models/Seller.js';
    import helmet from 'helmet';
    import dotenv from 'dotenv';
+   import cookieParser from 'cookie-parser';
+   import { homePage } from './controllers/userController.js';
    dotenv.config({path:"src/.env"})
    // Crear la app
    const app  = express()
@@ -36,6 +38,9 @@
    app.use(express.static('public'))
    //Permitimos la lectura de datos a traves de los elementos HTML.
    app.use(express.urlencoded({extended:true}))
+
+   app.use(cookieParser());
+
    
    app.listen(port,(request,response) => {
        // Imprimir un mensaje en la consola indicando el puerto en el que está funcionando el servidor
@@ -44,6 +49,7 @@
    });   
    app.use('/login',userRoutes)
    app.use(express.static('./src/public'))
-   
    app.use('/',generalRoutes)
+   app.use('/home',homePage);
+   
    
